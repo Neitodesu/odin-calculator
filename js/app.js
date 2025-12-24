@@ -38,6 +38,14 @@ buttons.forEach((symbol) => {
   let newButton = document.createElement('button');
   newButton.textContent = symbol;
 
+  if (operators.includes(symbol)) {
+    newButton.style.backgroundColor = '#d79921';
+  }
+
+  if (symbol == 'AC') {
+    newButton.style.backgroundColor = '#8ec07c';
+  }
+
   newButton.addEventListener('click', () => {
     if (operators.includes(symbol)) {
       if (symbol == '=') {

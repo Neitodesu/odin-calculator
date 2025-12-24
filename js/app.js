@@ -19,6 +19,7 @@ const buttons = [
   '.',
   '/',
   '=',
+  'C',
   'AC',
 ];
 
@@ -44,6 +45,13 @@ buttons.forEach((symbol) => {
 
   if (symbol == 'AC') {
     newButton.style.backgroundColor = '#8ec07c';
+    newButton.style.flex = 1;
+    newButton.style.borderRadius = '1em';
+  }
+
+  if (symbol == 'C') {
+    newButton.style.flex = 1;
+    newButton.style.borderRadius = '1em';
   }
 
   newButton.addEventListener('click', () => {
@@ -77,6 +85,8 @@ buttons.forEach((symbol) => {
     } else if (symbol == 'AC') {
       reset();
       input.value = '';
+    } else if (symbol == 'C') {
+      input.value = input.value.slice(0, -1);
     } else {
       if (symbol == '.') {
         if (input.value != '' && !input.value.includes(symbol)) {

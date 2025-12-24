@@ -64,11 +64,6 @@ button {
   font-size: 3em;
 }
 
-button:last-child {
-  width: 12rem;
-  border-radius: 1em;
-}
-
 button:hover {
   opacity: 0.5;
   cursor: pointer;
